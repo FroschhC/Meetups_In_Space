@@ -1,0 +1,13 @@
+<h1><%= @meetup.name %></h1> <br>
+<h3>Description: <%= @meetup.description%></h3>
+<h3>Location: <%= @meetup.location%></h3><br>
+
+<button>Join Meetup</button>
+<h3>Members:</h3>
+<ul>
+  <% @meetup.users.each do |member| %>
+  <li>
+    <%= member.username%>
+  </li>
+  <% end %>
+</ul>
